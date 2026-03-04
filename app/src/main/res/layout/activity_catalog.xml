@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#F5F5F5">
+    android:background="#1F2F46">
 
     <!-- HEADER -->
     <RelativeLayout
@@ -23,6 +23,7 @@
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
             android:src="@drawable/ic_back"
+            app:tint="#FFFFFF"
             android:contentDescription="Back"
             android:clickable="true"
             android:focusable="true"
@@ -52,6 +53,12 @@
         </LinearLayout>
     </RelativeLayout>
 
+    <!-- Header Underline -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#D4A017"/>
+
     <!-- SCROLL CONTENT -->
     <ScrollView
         android:layout_width="match_parent"
@@ -72,7 +79,7 @@
                 android:text="Scholar Catalog"
                 android:textSize="22sp"
                 android:textStyle="bold"
-                android:textColor="#1F2F46"
+                android:textColor="#FFFFFF"
                 android:layout_marginHorizontal="4dp"
                 android:paddingBottom="12dp"/>
 
@@ -538,7 +545,7 @@
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#1F2F46"
+        android:background="#FFFFFF"
         app:itemIconTint="@color/nav_item_color"
         app:itemTextColor="@color/nav_item_color"
         app:labelVisibilityMode="labeled"
