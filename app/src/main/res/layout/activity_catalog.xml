@@ -6,13 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#1F2F46">
+    android:background="#001F3F">
 
     <!-- HEADER -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:background="#1F2F46"
+        android:background="#001F3F"
         android:padding="16dp">
 
         <!-- Back Button -->
