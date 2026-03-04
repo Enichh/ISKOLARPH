@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:background="#001F3F">
 
-    <!-- HEADER -->
+    <!-- HEADER (FIXED) -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="80dp"
@@ -53,13 +53,115 @@
         </LinearLayout>
     </RelativeLayout>
 
-    <!-- Header Underline -->
+    <!-- Header Underline (FIXED) -->
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="#D4A017"/>
 
-    <!-- SCROLL CONTENT -->
+    <!-- FIXED SECTION (Title, Search Bar, and Separator) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:background="#001F3F">
+
+        <!-- TITLE -->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scholar Catalog"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginHorizontal="4dp"
+            android:paddingBottom="12dp"/>
+
+        <!-- SEARCH BAR WITH INTEGRATED FILTERS -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:strokeColor="#E0E0E0"
+            app:strokeWidth="1dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="4dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@android:drawable/ic_menu_search"
+                    app:tint="#666666"/>
+
+                <EditText
+                    android:id="@+id/et_search"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:hint="Search scholarships..."
+                    android:textSize="14sp"
+                    android:paddingHorizontal="8dp"
+                    android:inputType="text"
+                    android:maxLines="1"/>
+
+                <!-- Vertical Divider -->
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="24dp"
+                    android:background="#E0E0E0"
+                    android:layout_marginHorizontal="8dp"/>
+
+                <!-- Location Filter -->
+                <ImageView
+                    android:id="@+id/btn_filter_location"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_filter_list"
+                    app:tint="#1F2F46"
+                    android:contentDescription="Filter by Location"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"/>
+
+                <!-- Date Filter -->
+                <ImageView
+                    android:id="@+id/btn_filter_date"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_calendar"
+                    app:tint="#1F2F46"
+                    android:layout_marginStart="8dp"
+                    android:contentDescription="Filter by Date"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"/>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Separator Underline -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#D4A017"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginHorizontal="12dp"/>
+    </LinearLayout>
+
+    <!-- SCROLLABLE CONTENT (Scholarship Cards) -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -69,99 +171,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="12dp">
-
-            <!-- TITLE -->
-            <TextView
-                android:id="@+id/tv_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Scholar Catalog"
-                android:textSize="22sp"
-                android:textStyle="bold"
-                android:textColor="#FFFFFF"
-                android:layout_marginHorizontal="4dp"
-                android:paddingBottom="12dp"/>
-
-            <!-- SEARCH BAR WITH INTEGRATED FILTERS -->
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="4dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="2dp"
-                app:strokeColor="#E0E0E0"
-                app:strokeWidth="1dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:paddingHorizontal="12dp"
-                    android:paddingVertical="4dp">
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@android:drawable/ic_menu_search"
-                        app:tint="#666666"/>
-
-                    <EditText
-                        android:id="@+id/et_search"
-                        android:layout_width="0dp"
-                        android:layout_height="40dp"
-                        android:layout_weight="1"
-                        android:background="@android:color/transparent"
-                        android:hint="Search scholarships..."
-                        android:textSize="14sp"
-                        android:paddingHorizontal="8dp"
-                        android:inputType="text"
-                        android:maxLines="1"/>
-
-                    <!-- Vertical Divider -->
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="24dp"
-                        android:background="#E0E0E0"
-                        android:layout_marginHorizontal="8dp"/>
-
-                    <!-- Location Filter -->
-                    <ImageView
-                        android:id="@+id/btn_filter_location"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/ic_filter_list"
-                        app:tint="#1F2F46"
-                        android:contentDescription="Filter by Location"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:background="?attr/selectableItemBackgroundBorderless"/>
-
-                    <!-- Date Filter -->
-                    <ImageView
-                        android:id="@+id/btn_filter_date"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/ic_calendar"
-                        app:tint="#1F2F46"
-                        android:layout_marginStart="8dp"
-                        android:contentDescription="Filter by Date"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:background="?attr/selectableItemBackgroundBorderless"/>
-
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-            <!-- Separator Underline -->
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#D4A017"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                android:layout_marginHorizontal="12dp"/>
+            android:paddingHorizontal="12dp"
+            android:paddingBottom="12dp">
 
             <!-- LUZON CARD MODERN -->
             <com.google.android.material.card.MaterialCardView
@@ -540,7 +551,7 @@
         </LinearLayout>
     </ScrollView>
 
-    <!-- BOTTOM NAVIGATION -->
+    <!-- BOTTOM NAVIGATION (FIXED) -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
