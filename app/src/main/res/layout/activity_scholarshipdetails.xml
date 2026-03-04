@@ -6,7 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/sti_blue"
+    android:background="#001F3F"
     tools:context=".MainActivity">
 
     <!-- HEADER -->
@@ -14,7 +14,7 @@
         android:id="@+id/headerLayout"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:background="@color/sti_blue"
+        android:background="#001F3F"
         android:padding="16dp"
         app:layout_constraintTop_toTopOf="parent">
 
