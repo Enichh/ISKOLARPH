@@ -33,6 +33,7 @@ ISKOLARPH helps Filipino students discover and apply for scholarships that match
 **James Viray**  
 **Jayron Mina**  
 **Jason Gabriel Villareal**
+**Victorino Andrei**
 
 </div>
 
