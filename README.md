@@ -28,13 +28,12 @@ ISKOLARPH helps Filipino students discover and apply for scholarships that match
 
 <div align="center">
 
-**Enoch Gabriel Astor**  
-**Krizia Mae Oliva**  
-**James Viray**  
-**Jayron Mina**  
-**Jason Gabriel Villareal**
-**Andrei Victorino**
-
+- **Enoch Gabriel Astor**
+- **Krizia Mae Oliva**
+- **James Viray**
+- **Jayron Mina**
+- **Jason Gabriel Villareal**
+- **Andrei Victorino**
 
 </div>
 
