@@ -18,7 +18,7 @@ A comprehensive Android scholarship finder app designed specifically for Filipin
 
 </div>
 
----
+
 
 ## Overview
 
