@@ -24,18 +24,7 @@ A comprehensive Android scholarship finder app designed specifically for Filipin
 
 ISKOLARPH helps Filipino students discover and apply for scholarships that match their academic profile and location. The app provides personalized scholarship recommendations, AI-powered assistance, and a comprehensive catalog of available opportunities.
 
-### Development Team
 
-<div align="center">
-
-- **Enoch Gabriel Astor**
-- **Krizia Mae Oliva**
-- **James Viray**
-- **Jayron Mina**
-- **Jason Gabriel Villareal**
-- **Andrei Victorino**
-
-</div>
 ---
 
 ## Features
